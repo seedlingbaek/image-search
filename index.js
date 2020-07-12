@@ -90,12 +90,24 @@ function searchImages(id) {
         `
 
         $("#result").after(modal);
+
+        // if has exif info;
+        // if (photo.exif)
+        // let exif = `
+        // <div class="container">
+        // <ul>
+        // <li>Camera Make:${photo.exif.make}</li>
+        // <li>Camera Modeal: ${photo.exif.modal} </li>
+        // <li>Exposure Time: ${photo.exif.exposure_time} </li>
+        // <li>Aperture: ${photo.exif.aperture} </li>
+        // <li>Focal Length: ${photo.exif.focal_length} </li>
+        // <li>ISO: ${photo.exif.iso} </li>
+        // </ul>
+        // </div>`
       })
 
     }
-    else {
-      $("#result").html(<h1>No Photos Found</h1>);
-    }
+
 
 
   })
