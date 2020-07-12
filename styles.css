@@ -1,28 +1,33 @@
 body {
-  position: relative;
-  width: 1440px;
-  height: 1024px;
+  /* position: relative; */
 
   background: #050417;
 }
 
-h1 {
+.search_field{
   position: absolute;
-  width: 213px;
-  height: 128px;
-  left: 614px;
-  top: 240px;
+  top: 50%;
+  left: 50%;
+}
+
+.title_container {
+  position: absolute;
+  display: flex;
+  width: 23%;
+  height: 12.5%;
+  left: 50%;
+  top: 20%;
 
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 49px;
-  text-align: center;
+  /* text-align: center; */
 
   color: #FFFFFF;
 }
-.topnav {
+/* .topnav {
   position: fixed;
   width: 1128px;
   height: 55px;
@@ -30,25 +35,21 @@ h1 {
   top: 35px;
   background: #050417;
 
-}
+} */
 select{
-
-  /* position: absolute; */
-  width: 400px;
+  display: flex;
+  position: relative;
+  width: 39%;
   height: 55px;
-  left: 520px;
-  top: 496px;
+  top: 25px;
+  /* left: 520px;
+  top: 496px; */
   font-family:'Open Sans';
   background: #FFFFFF;
   border-radius: 4px;
 }
 .collections{
 
-  /* position: absolute; */
-  width: 74px;
-  height: 20px;
-  left: 540px;
-  top: 511px;
 
   font-family: 'Open Sans';
   font-size: 14px;
@@ -60,30 +61,20 @@ select{
 
 option {
 
-  position: absolute;
-  width: 74px;
-  height: 20px;
-  left: 540px;
-  top: 511px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  line-height: 19px;
+  color: #050417;
 
 }
 
-.field {
-  position: absolute;
-  width: 400px;
-  height: 50px;
-  left: 520px;
-  top: 425px;
-
-  background: #FFFFFF;
-  border-radius: 4px;
-}
 input {
-  /* position: absolute; */
-  width: 400px;
+
+  display: flex;
+  width: 38%;
   height: 50px;
-  left: 520px;
-  top: 425px;
+  top: 10%;
+
 
   background: #FFFFFF;
   border-radius: 4px;
@@ -94,24 +85,29 @@ input {
 }
 ::placeholder {
   /* position: absolute; */
-  width: 42px;
+  /* width: 42px;
   height: 20px;
   left: 540px;
-  top: 441px;
+  top: 441px; */
   color: #D5D7E5;
 }
 
 button {
-  position: absolute;
-  width: 246px;
+  position: relative;
+  display: flex;
+  width: 24%;
   height: 50px;
-  left: 606px;
-  top: 621px;
+  top: 75px;
+  left: 86px;
 
   font-style: normal;
   font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
 
-  letter-spacing: 0.1em;
+
+  /* letter-spacing: 0.1em; */
 
   color: #FFFFFF;
   background: #2A2B8D;
@@ -140,11 +136,11 @@ button {
 }
 .grid-layout {
   display: flex;
-  padding: .5rem .5rem 0 .5rem;
+  /* padding: .5rem .5rem 0 .5rem; */
   width: 940px;
   height: 1076px;
-  left: 250px;
-  top: 170px;
+  /* left: 250px;
+  top: 170px; */
 
 }
 .grid-item {

@@ -5,7 +5,8 @@ var api = "https://api.unsplash.com/"
 function searchCollections() {
   var collectionName = $("select").val();
 
-  var collectionsURL =  api+"search/collections?client_id="+accessKey+"&query="+collectionName;
+  // use max per_page option to maximize number of results
+  var collectionsURL =  api+"search/collections?per_page=30&client_id="+accessKey+"&query="+collectionName;
 
   fetch(collectionsURL)
   .then(function(data) {
@@ -13,33 +14,36 @@ function searchCollections() {
     return data.json();
   })
   .then(function(data) {
-
-
-    // var collectionsID = [];
-    // first page
+    console.log(data);
+    // first page of 10(defalt) results
     data.results.forEach(collection => {
-      // collectionID = collection.id;
+
       searchImages(collection.id);
     })
 
-    // if (data.total_pages > 1) {
-    //
-    //   for (var i = 2; i < data.total_pages+1; i++) {
-    //
-    //     fetch(collectionsURL+"&page="+i)
-    //     .then(function(data) {
-    //
-    //       return data.json();
-    //     })
-    //     .then(function(data) {
-    //
-    //       data.results.forEach(collection => {
-    //         // collectionID = collection.id;
-    //         searchImages(collection.id);
-    //       })
-    //     })
-    //   }
-    // }
+    // if found more pages
+    // for demo purpose, only access first 10 pages
+
+    // access header to check for remaining rate limit when searching image
+
+    if (data.total_pages > 1) {
+
+      for (var i = 2; i < 10; i++) {
+
+        fetch(collectionsURL+"&page="+i)
+        .then(function(data) {
+
+          return data.json();
+        })
+        .then(function(data) {
+
+          data.results.forEach(collection => {
+
+            searchImages(collection.id);
+          })
+        })
+      }
+    }
 
 
 
@@ -48,7 +52,7 @@ function searchCollections() {
 
 function searchImages(id) {
   var query = $("input").val();
-  var queryURL = api+"search/photos?query="+query+"&collections="+id+"&client_id="+accessKey;
+  var queryURL = api+"search/photos?per_page=30&query="+query+"&collections="+id+"&client_id="+accessKey;
   var queryImages = []
   fetch(queryURL)
   .then(function(data) {

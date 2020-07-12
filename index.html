@@ -9,28 +9,28 @@
 
   </head>
   <body>
-
-
-        <h1>image search</h1>
-
-
-
-      <input class="input" type="text" placeholder="Query" style="position:absolute;">
-
-
-    <div class="dropdown" >
-      <select style="position:absolute;">
-        <option class="collections" value="" selected disabled>Collections</option>
-        <option value="Architecture">Architecture</option>
-        <option value="Business">Business</option>
-        <option value="Nature">Nature</option>
-        <option value="Wallpapers">Wallpapers</option>
-      </select>
-
+    <div class="title_container">
+      <h1>image search</h1>
     </div>
-    <button onclick="searchCollections()">SEARCH</button>
-    <div id="result" class="grid-layout">
 
+      <div class="search_field">
+          <input class="input" type="text" placeholder="Query">
+
+
+          <div class="dropdown" >
+            <select>
+              <option class="collections" value="" selected disabled>Collections</option>
+              <option value="Architecture">Architecture</option>
+              <option value="Business">Business</option>
+              <option value="Nature">Nature</option>
+              <option value="Wallpapers">Wallpapers</option>
+            </select>
+
+          </div>
+          <button onclick="searchCollections()">SEARCH</button>
+          <div id="result" class="grid-layout">
+
+            </div>
       </div>
 
 
