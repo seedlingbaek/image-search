@@ -63,7 +63,7 @@ function searchImages(id) {
 
         let result = `
         <div class="grid-item">
-          <img src="${photo.urls.small}">
+          <img src="${photo.urls.small}" onclick=openModal("${photo.id}")>
 
         <div>
         `;
@@ -76,16 +76,7 @@ function searchImages(id) {
           <span class="close" onclick=closeModal("${photo.id}")>&times;</span>
           <img class="modal-content" src="${photo.urls.full}">
           <div id="user">username="${photo.user.name}"</div>
-          <div class="container">
-          <ul>
-          <li>Camera Make:${photo.exif.make}</li>
-          <li>Camera Modeal: ${photo.exif.modal} </li>
-          <li>Exposure Time: ${photo.exif.exposure_time} </li>
-          <li>Aperture: ${photo.exif.aperture} </li>
-          <li>Focal Length: ${photo.exif.focal_length} </li>
-          <li>ISO: ${photo.exif.iso} </li>
-          </ul>
-          </div>
+
         </div>
         `
 
