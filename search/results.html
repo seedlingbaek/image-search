@@ -2,17 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Image Search</title>
+    <title>Results</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
-  <body>
-    <div class="title_container">
-      <h1>image search</h1>
-    </div>
-
+  <body onload="onLoad()">
+    <div class="topnav">
       <div class="search_field">
           <input class="input" type="text" placeholder="Query">
 
@@ -27,20 +24,13 @@
             </select>
 
           </div>
+
+          <button onclick="searchCollections()">SEARCH</button>
       </div>
-
-    <div class="button">
-      <button onclick="redirect()">SEARCH</button>
     </div>
+    <div id="result" class="grid-layout">
 
-          <!-- <div id="result" class="grid-layout">
-
-          </div> -->
-
-
-
-
-  <script src="index.js" charset="utf-8"></script>
+    </div>
+  <script src="results.js" charset="utf-8"></script>
   </body>
-
 </html>
